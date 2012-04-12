@@ -119,7 +119,7 @@ class Recipe:
 
 def download_file(url, fname):
     d = Download()
-    path, is_temp = download(url)
+    path, is_temp = d(url)
     shutil.copyfile(path, fname)
     if is_temp:
         os.unlink(path)
